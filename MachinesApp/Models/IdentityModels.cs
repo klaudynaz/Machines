@@ -27,9 +27,9 @@ namespace MachinesApp.Models
         {
         }
 
-        DbSet<Employee> Employee { get; set; }
-        DbSet<Hire> Hire { get; set; }
-        DbSet<Machine> Machine { get; set; }
+        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Hire> Hire { get; set; }
+        public DbSet<Machine> Machine { get; set; }
 
 
 

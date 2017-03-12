@@ -1,0 +1,39 @@
+﻿@model MachinesApp.Models.AddNewEmployee
+@{
+    ViewBag.Title = "Dodaj nowego pracownika";
+}
+
+<h2>@TempData["Sukces"]</h2>
+<h2>Formularz dodawania pracownika</h2>
+
+<!-- Kazdy formularz poprzedzamy metoda using  + nazwa metody w kontrolerze + nazwa kontrolera w którym znajduje się metoda oraz nazwa metody formularowej FormMethod...-->
+@using (Html.BeginForm("AddNewEmployee", "Employee", FormMethod.Post))
+{
+
+
+   
+       <div  class="form-inline">
+            <label>Imie</label>
+            @Html.TextBoxFor(x => x.First_Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.First_Name)
+        
+        <label class="Klaudyna">Nazwisko</label>
+        @Html.TextBoxFor(x => x.Last_Name)
+        @Html.ValidationMessageFor(x => x.Last_Name)
+        <label>Dział</label>
+        @Html.TextBoxFor(x => x.Dept)
+        @Html.ValidationMessageFor(x => x.Dept)
+        <label>Stanowisko</label>
+        @Html.TextBoxFor(x => x.Position)
+        @Html.ValidationMessageFor(x => x.Position)
+        <label>Adres email</label>
+        @Html.TextBoxFor(x => x.Email_Adress)
+        @Html.ValidationMessageFor(x => x.Email_Adress)
+        <label>Numer telefonu</label>
+        @Html.TextBoxFor(x => x.Phone_Number)
+        @Html.ValidationMessageFor(x => x.Phone_Number)
+    </div>
+
+
+        <button type="submit"> Wyślij formularz </button> <!-- Submit button-->
+}
