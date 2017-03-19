@@ -12,12 +12,12 @@
 
 
    
-       <div  class="form-inline">
-            <label>Imie</label>
-            @Html.TextBoxFor(x => x.First_Name, new { @class = "form-control" })
-            @Html.ValidationMessageFor(x => x.First_Name)
+       <div>
+       <label>Imie</label>
+        @Html.TextBoxFor(x => x.First_Name)
+        @Html.ValidationMessageFor(x => x.First_Name)
         
-        <label class="Klaudyna">Nazwisko</label>
+        <label>Nazwisko</label>
         @Html.TextBoxFor(x => x.Last_Name)
         @Html.ValidationMessageFor(x => x.Last_Name)
         <label>Dział</label>
