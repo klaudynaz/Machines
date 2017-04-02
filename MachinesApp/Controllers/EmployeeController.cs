@@ -40,5 +40,19 @@ namespace MachinesApp.Controllers
             return View();
 
         }
+
+
+
+        [HttpGet] 
+        public ActionResult ViewNewEmployee()
+        {
+
+            using (var db = new ApplicationDbContext()) {
+
+                var viewemployee = db.Employee.ToList();
+                return View(viewemployee);
+            }
+                
+        }
     }
 }
