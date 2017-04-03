@@ -236,6 +236,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MachineController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -243,6 +244,7 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddNewEmployee.cs" />
+    <Compile Include="Models\AddNewMachine.cs" />
     <Compile Include="Models\DB\Employee.cs" />
     <Compile Include="Models\DB\Hire.cs" />
     <Compile Include="Models\DB\Machine.cs" />
@@ -311,6 +313,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Employee\AddNewEmployee.cshtml" />
     <Content Include="Views\Employee\ViewNewEmployee.cshtml" />
+    <Content Include="Views\Machine\AddNewMachine.cshtml" />
+    <Content Include="Views\Machine\ViewNewMachine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
