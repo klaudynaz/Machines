@@ -17,6 +17,9 @@ namespace MachinesApp.Models.DB
         [Required]
         public string Description { get; set; }
 
+        public int Employee_Id { get; set; }
+        public int Machine_Id { get; set; }
+
         public virtual Employee Employee { get; set; }
         public virtual Machine Machine { get; set; }
     }
