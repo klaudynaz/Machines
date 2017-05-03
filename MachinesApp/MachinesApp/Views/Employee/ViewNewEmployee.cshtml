@@ -1,0 +1,32 @@
+﻿@model List<MachinesApp.Models.DB.Employee>
+@{
+    ViewBag.Title = "ViewNewEmployee";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th> Imię </th>
+        <th>Nazwisko</th>
+        <th>Dział</th>
+        <th>Stanowisko</th>
+        <th>Email</th>
+        <th>Numer telefonu</th>
+    </tr>
+
+    @foreach (var i in Model)
+    {
+
+        <tr>
+            <td>@i.First_Name</td>
+            <td>@i.Last_Name</td>
+            <td>@i.Dept</td>
+            <td>@i.Position</td>
+            <td>@i.Email_Adress</td>
+            <td>@i.Phone_Number</td>
+        </tr>
+
+    }
+
+</table>
+
+

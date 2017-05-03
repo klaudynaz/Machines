@@ -1,0 +1,32 @@
+﻿@model List<MachinesApp.Models.DB.Machine>
+@{
+    ViewBag.Title = "ViewNewMachine";
+}
+
+<h2>Lista maszyn</h2>
+<table class="table table-bordered">
+    <tr>
+        <th> Id Maszyny </th>
+        <th> Numer seryjny </th>
+        <th> Producent </th>
+        <th> Model </th>
+        <th> Wymiary </th>
+        <th> Opis </th>
+        <th> Waga </th>
+    </tr>
+
+    @foreach (var i in Model)
+    {
+
+        <tr>
+            <td>@i.Id_machine</td>
+            <td>@i.Serial_number</td>
+            <td>@i.Producer</td>
+            <td>@i.Model</td>
+            <td>@i.Size</td>
+            <td>@i.Description</td>
+            <td>@i.Weight</td>
+        </tr>
+
+    }
+

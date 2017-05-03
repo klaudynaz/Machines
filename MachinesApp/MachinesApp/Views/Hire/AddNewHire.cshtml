@@ -1,0 +1,53 @@
+﻿@model MachinesApp.Models.AddNewHire
+
+@{
+    ViewBag.Title = "AddNewHire";
+}
+
+<h2>AddNewHire</h2>
+
+<div>
+<label>Wybór pracownika</label>
+<select name="Id_employee">
+    @{
+        foreach (var item in Model.Employees)
+        {
+            <option value="@item.Id_employee"> @item.First_Name @item.Last_Name </option>
+            }
+        }
+    }
+</select>
+@Html.ValidationMessageFor(x => x.Id_employee)
+</div>
+<div>
+    <label>Wybór maszyny</label>
+    <select name="Id_machine">
+        @{
+            foreach (var item in Model.Machines)
+            {
+                <option value="@item.Id_machine"> @item.Serial_number @item.Model </option>
+            }
+        }
+        }
+    </select>
+    @Html.ValidationMessageFor(x => x.Id_machine)
+</div>
+
+<div>
+    <label>Początek rezerwacji</label>
+    @Html.TextBoxFor(x => x.DateFrom)
+    @Html.ValidationMessageFor(x => x.DateFrom)
+</div>
+<div>
+    <label>Koniec rezerwacji</label>
+    @Html.TextBoxFor(x => x.DateEnd)
+    @Html.ValidationMessageFor(x => x.DateEnd)
+</div>
+<div>
+    <label>Opis rezerwacji</label>
+    @Html.TextBoxFor(x => x.Description)
+    @Html.ValidationMessageFor(x => x.Description)
+</div>
+
+<button type="submit"> Wyślij formularz </button> <!-- Submit button-->
+

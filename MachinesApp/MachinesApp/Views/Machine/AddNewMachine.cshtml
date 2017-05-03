@@ -1,0 +1,49 @@
+﻿@model MachinesApp.Models.DB.AddNewMachine
+@{
+    ViewBag.Title = "Dodaj nową maszynę";
+}
+<h2>@TempData["Sukces2"]</h2>
+<h2>Formularz dodawania maszyny</h2>
+
+<!-- Kazdy formularz poprzedzamy metoda using  + nazwa metody w kontrolerze + nazwa kontrolera w którym znajduje się metoda oraz nazwa metody formularowej FormMethod...-->
+@using (Html.BeginForm("AddNewMachine", "Machine", FormMethod.Post))
+{
+<div class="form-group">
+        <label>Numer id maszyny</label>
+        @Html.TextBoxFor(x => x.Id_machine, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Id_machine)
+    </div>
+    <div class="form-group">
+        <label>Numer seryjny</label>
+        @Html.TextBoxFor(x => x.Serial_number, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Serial_number)
+    </div>
+    <div class="form-group">
+        <label>Producent</label>
+        @Html.TextBoxFor(x => x.Producer, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Producer)
+    </div>
+    <div class="form-group">
+        <label>Model</label>
+        @Html.TextBoxFor(x => x.Model, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Model)
+    </div>
+    <div class="form-group">
+        <label>Wymiary</label>
+        @Html.TextBoxFor(x => x.Size, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Size)
+    </div>
+    <div class="form-group">
+        <label>Opis</label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Description)
+    </div>
+<div class="form-group">
+    <label>Waga</label>
+    @Html.TextBoxFor(x => x.Weight, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Weight)
+</div>
+
+<button type="submit"> Wyślij formularz </button> <!-- Submit button-->
+
+}
