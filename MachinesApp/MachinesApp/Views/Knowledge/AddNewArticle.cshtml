@@ -1,0 +1,19 @@
+﻿@model MachinesApp.Models.DB.AddNewArticle
+@{
+    ViewBag.Title = "AddNewArticle";
+}
+
+<h2>Dodaj nowy artykuł</h2>
+
+@using (Html.BeginForm("AddNewArticle", "Knowledge", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Numer id artykułu</label>
+        @Html.TextBoxFor(x => x.Id_article, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Id_article)
+    </div>
+   
+
+    <button type="submit"> Wyślij formularz </button> <!-- Submit button-->
+
+}

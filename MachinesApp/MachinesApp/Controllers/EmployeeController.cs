@@ -78,5 +78,32 @@ namespace MachinesApp.Controllers
             }
 
         }
+
+        [HttpGet]
+        public ActionResult RemoveEmployee(int employeeid)
+        {
+
+            using (var db = new ApplicationDbContext())
+
+            {   
+                var removed = db.Employee.FirstOrDefault(x => x.Id == employeeid);
+                
+                if (removed == null)
+
+                {
+                    TempData["Remove"] = "Pracownik o takim id nie istnieje w systemie";
+
+                }
+
+                else
+                {
+                    db.Employee.Remove(removed);
+                    db.SaveChanges();
+                    TempData["Remove"] = "Pracownik został usunięty z systemu";
+                }
+
+                return RedirectToAction("ViewNewEmployee", "Employee"); ;
+            }
+        }
     }
 }

@@ -199,6 +199,7 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HireController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KnowledgeController.cs" />
     <Compile Include="Controllers\MachineController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -208,8 +209,10 @@
     <Compile Include="Models\AddNewEmployee.cs" />
     <Compile Include="Models\AddNewHire.cs" />
     <Compile Include="Models\AddNewMachine.cs" />
+    <Compile Include="Models\AddNewArticle.cs" />
     <Compile Include="Models\DB\Employee.cs" />
     <Compile Include="Models\DB\Hire.cs" />
+    <Compile Include="Models\DB\Knowledge.cs" />
     <Compile Include="Models\DB\Machine.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -279,6 +282,7 @@
     <Content Include="Views\Hire\AddNewHire.cshtml" />
     <Content Include="Views\Employee\AddNewEmployee.cshtml" />
     <Content Include="Views\Employee\ViewNewEmployee.cshtml" />
+    <Content Include="Views\Knowledge\AddNewArticle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

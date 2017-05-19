@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "ViewNewEmployee";
 }
-
+<h2>@TempData["Remove"]</h2>
 <table class="table table-bordered">
     <tr>
         <th> Imię </th>
@@ -11,6 +11,7 @@
         <th>Stanowisko</th>
         <th>Email</th>
         <th>Numer telefonu</th>
+        <th>Akcje</th>
     </tr>
 
     @foreach (var i in Model)
@@ -23,9 +24,12 @@
             <td>@i.Position</td>
             <td>@i.Email_Adress</td>
             <td>@i.Phone_Number</td>
+            <td>@Html.ActionLink("Usuń", "RemoveEmployee","Employee", new { employeeid = i.Id},null)</td>
         </tr>
 
     }
+
+
 
 </table>
 
