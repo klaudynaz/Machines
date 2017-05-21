@@ -102,8 +102,49 @@ namespace MachinesApp.Controllers
                     TempData["Remove"] = "Pracownik został usunięty z systemu";
                 }
 
-                return RedirectToAction("ViewNewEmployee", "Employee"); ;
+                return RedirectToAction("ViewNewEmployee", "Employee"); 
             }
         }
+
+
+        [HttpGet]
+        public ActionResult EditEmployee(int employeeid)
+        {
+
+            using (var db = new ApplicationDbContext())
+            {
+                var edited = db.Employee.FirstOrDefault(x => x.Id == employeeid);
+                return View(edited);
+            }
+
+        }
+
+
+        [HttpPost]
+        public ActionResult EditEmployee(Models.DB.Employee editedemp)
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                var edited = db.Employee.FirstOrDefault(x => x.Id == editedemp.Id);
+               edited.Employee_email = editedemp.Email_Adress;
+                edited.First_Name = editedemp.First_Name;
+                edited.Last_Name = editedemp.Last_Name;
+                edited.Dept = editedemp.Dept;
+                edited.Position = editedemp.Position;
+                edited.Email_Adress = editedemp.Email_Adress;
+                edited.Phone_Number = editedemp.Phone_Number;
+                db.SaveChanges();
+                return RedirectToAction("ViewNewEmployee", "Employee");
+
+
+            }
+        }
+
+
+
+
+
+
+
     }
 }

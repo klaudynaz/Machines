@@ -283,6 +283,7 @@
     <Content Include="Views\Employee\AddNewEmployee.cshtml" />
     <Content Include="Views\Employee\ViewNewEmployee.cshtml" />
     <Content Include="Views\Knowledge\AddNewArticle.cshtml" />
+    <Content Include="Views\Employee\EditEmployee.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

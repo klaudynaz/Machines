@@ -25,6 +25,7 @@
             <td>@i.Email_Adress</td>
             <td>@i.Phone_Number</td>
             <td>@Html.ActionLink("Usuń", "RemoveEmployee","Employee", new { employeeid = i.Id},null)</td>
+            <td>@Html.ActionLink("Edytuj", "EditEmployee", "Employee", new { employeeid = i.Id },null)</td>
         </tr>
 
     }

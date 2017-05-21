@@ -1,0 +1,46 @@
+﻿@model MachinesApp.Models.DB.Employee
+@{
+    ViewBag.Title = "Edytuj Dane Pracownika";
+}
+
+<h2>EditEmployee</h2>
+
+@using (Html.BeginForm("EditEmployee", "Employee", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id)
+
+    <div class="form-group">
+        <label>Imie</label>
+        @Html.TextBoxFor(x => x.First_Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.First_Name)
+    </div>
+    <div class="form-group">
+        <label>Nazwisko</label>
+        @Html.TextBoxFor(x => x.Last_Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Last_Name)
+    </div>
+    <div class="form-group">
+        <label>Dział</label>
+        @Html.TextBoxFor(x => x.Dept, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Dept)
+    </div>
+    <div class="form-group">
+        <label>Stanowisko</label>
+        @Html.TextBoxFor(x => x.Position, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Position)
+    </div>
+    <div class="form-group">
+        <label>Adres email</label>
+        @Html.TextBoxFor(x => x.Email_Adress, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Email_Adress)
+    </div>
+    <div class="form-group">
+        <label>Numer telefonu</label>
+        @Html.TextBoxFor(x => x.Phone_Number, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Phone_Number)
+    </div>
+
+
+
+    <button type="submit"> Edytuj </button> <!-- Submit button-->
+}
