@@ -5,15 +5,16 @@
 }
 
 <h2>AddNewHire</h2>
-
+@using (Html.BeginForm("AddNewHire", "Employee", FormMethod.Post))
+{
 <div>
 <label>Wybór pracownika</label>
 <select name="Id_employee">
     @{
         foreach (var item in Model.Employees)
         {
-            <option value="@item.Id_employee"> @item.First_Name @item.Last_Name </option>
-            }
+            <option value="@item.Id"> @item.First_Name @item.Last_Name </option>
+        }
         }
     }
 </select>
@@ -51,3 +52,4 @@
 
 <button type="submit"> Wyślij formularz </button> <!-- Submit button-->
 
+            }
